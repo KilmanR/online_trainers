@@ -77,7 +77,7 @@
 #     else:
 #         return False
 
-print('Welcome to FizzBuzz!') # игра FizzBuzz много уроков, пишу всёё за раз
+print('Welcome to FizzBuzz!') # игра FizzBuzz много уроков, пишу всё за раз
 
 def fizzbuzz(number):
     result = ''
