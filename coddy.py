@@ -77,20 +77,49 @@
 #     else:
 #         return False
 
-print('Welcome to FizzBuzz!') # игра FizzBuzz много уроков, пишу всё за раз
+# print('Welcome to FizzBuzz!') # игра FizzBuzz много уроков, пишу всё за раз
 
-def fizzbuzz(number):
-    result = ''
-    if number % 3 == 0:
-        result += 'Fizz'
-    if number % 7 == 0:
-        result += 'Buzz'
-    if result == '':
-        if '3' in str(number):
-            result = 'Almost Fizz'
-        else: 
-            result = str(number)
-    return result
-limit = int(input())
-for i in range(1, limit +1):
-    print(fizzbuzz(i))
+# def fizzbuzz(number):
+#     result = ''
+#     if number % 3 == 0:
+#         result += 'Fizz'
+#     if number % 7 == 0:
+#         result += 'Buzz'
+#     if result == '':
+#         if '3' in str(number):
+#             result = 'Almost Fizz'
+#         else: 
+#             result = str(number)
+#     return result
+# limit = int(input())
+# for i in range(1, limit +1):
+#     print(fizzbuzz(i))
+
+# def change_element(lst, index, new_element):
+#     lst[index] = new_element
+#     print(lst)
+# lst = ['a', 'b', 'c']
+# index = 1
+# new_element = 'd'
+# change_element(lst, index, new_element)
+
+# def change_element(lst1, index, lst2):
+#     lst1[index] = lst2[index - 1]
+#     print(lst1)
+# lst1 = [1, 2, 3]
+# index = 1
+# lst2 = [5, 6, 7]
+# change_element(lst1, index, lst2)
+
+# lst1 = [1, 2, 3]
+# lst2 = [3, 4, 5]
+# result = []
+# def merge(lst1, lst2):
+#     for element in lst1:
+#         result.append(element)
+#     for element in lst2:
+#         result.append(element)
+#     result.sort()
+#     print(result)
+# merge( lst1, lst2)
+
