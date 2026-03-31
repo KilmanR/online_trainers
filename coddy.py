@@ -148,5 +148,27 @@
 #     return reversed_list
 
 
-lst = [1, 2, 3]
-prod(lst)
+# lst = [1, 2, 3]
+# prod(lst)
+
+# print('способ перебора списка с использованием for')
+
+# fruits = ['apple', 'banana', 'orange']  # выводим весь список на каждой строке каждый элемент
+# for fruit in fruits:
+#     print(fruit)
+
+# fruits = ['apple', 'banana', 'orange']    # сортируем по длине элементов списка
+# for fruit in fruits:
+#     if len(fruit) > 5:
+#         print(fruit)
+
+# print('Создайте программу, которая получает список как ввод (данный), ' \
+# 'и выводит новый список, содержащий только слова длиннее чем 5 символов')
+
+# lst = input().split(',')
+# lst1 = []
+# for i in lst:
+#     if len(i) > 5:
+#         lst1.append(i)
+# print(lst1)
+
