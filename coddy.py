@@ -123,3 +123,30 @@
 #     print(result)
 # merge( lst1, lst2)
 
+# def combine_and_filter(lst, threshold):
+#     filtered_numbers = [num for num in lst if num > threshold]
+#     filtered_numbers.sort()
+#     print(filtered_numbers)
+#     return filtered_numbers        
+    
+
+# lst = [1, 5, 3, 8, 2, 7, 4, 6]
+# threshold = 4
+# combine_and_filter(lst, threshold)
+
+# def prod(lst):
+#     product = 1
+#     for num in lst:
+#         product *= num
+#     print(product)
+#     return product
+    
+# def reverse(lst):
+#     reversed_list = []
+#     for i in range(len(lst) - 1, -1, -1):
+#         reversed_list.append(lst[i])
+#     return reversed_list
+
+
+lst = [1, 2, 3]
+prod(lst)

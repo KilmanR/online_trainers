@@ -442,10 +442,102 @@
 # else:
 #     print('NO')
 
-x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
-if (x1 == x2 and y1 != y2) or (x1 != x2 and y1 == y2):
-    print('YES')
-elif ((x1 - x2) ** 2) == ((y1 - y2) ** 2):
-    print('YES')
-else:
-    print('NO')
+# x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
+# if (x1 == x2 and y1 != y2) or (x1 != x2 and y1 == y2):
+#     print('YES')
+# elif ((x1 - x2) ** 2) == ((y1 - y2) ** 2):
+#     print('YES')
+# else:
+#     print('NO')
+
+# a = 13
+# b = 7
+
+# total = a + b
+# diff = a - b
+# prod = a * b
+# div1 = a / b
+# div2 = a // b
+# mod = a % b
+# exp = a ** b
+
+# print(a, '+', b, '=', total)
+# print(a, '-', b, '=', diff)
+# print(a, '*', b, '=', prod)
+# print(a, '/', b, '=', div1)
+# print(a, '//', b, '=', div2)
+# print(a, '%', b, '=', mod)
+# print(a, '**', b, '=', exp)
+
+# num1 = 25_000_000
+# num2 = 25000000
+# print(num1)
+# print(num2)
+
+# a = 13.5
+# b = 2.0
+
+# total = a + b
+# diff = a - b
+# prod = a * b
+# div = a / b
+# exp = a ** b
+
+# print(a, '+', b, '=', total)
+# print(a, '-', b, '=', diff)
+# print(a, '*', b, '=', prod)
+# print(a, '/', b, '=', div)
+# print(a, '**', b, '=', exp)
+
+# a = 13.5
+# b = 2.0
+# int_div = a // b
+# mod = a % b
+
+# print(a, '//', b, '=', int_div)
+# print(a, '%', b, '=', mod)
+
+# print('Площадь треугольника')
+# a = float(input())
+# b = float(input())
+
+# s = 0.5 * a * b
+# print(s)
+
+# s = float(input())
+# v1 = float(input())
+# v2 = float(input())
+# t = s / (v1 + v2)
+# print(t)
+
+# num = float(input())
+# if num == 0:
+#     print('Обратного числа не существует')
+# else:
+#     print(1 / num)
+
+# print('перевод фаренгейт в цельсий')
+
+# tf = float(input())
+# tc = (5 / 9) * (tf - 32)
+# print(tc)
+
+# print('Dog age')
+
+# age = float(input())
+
+# if age <= 2:
+#     print(10.5 * age)
+# else:
+#     print(21 + (age - 2) * 4)
+
+# print('Первая цыфра после точки')
+
+# num = float(input())
+# print(int((num * 10) % 10))
+
+# print('дробная часть')
+
+# num = input()
+# parts = num.split('.')
+# print(f'0.', parts[1], sep='')
