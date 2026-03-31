@@ -541,3 +541,78 @@
 # num = input()
 # parts = num.split('.')
 # print(f'0.', parts[1], sep='')
+
+# print('Функции min() и max()')
+
+# a = max(3, 8, -3, 12, 9)
+# b = min(3, 8, -3, 12, 9)
+# c = max(3.14, 2.17, 9.8)
+# print(a)
+# print(b)
+# print(c)
+
+# print('Функция abs() модули абсолютного числа')
+
+# print(abs(10))
+# print(abs(-7))
+# print(abs(0))
+# print(abs(-17.67))
+
+# print('Наибольшее и наименьшее')
+# print('Напишите программу, которая находит наименьшее и наибольшее из пяти чисел')
+# a, b, c, d, e = int(input()), int(input()), int(input()), int(input()), int(input())
+# lst = []
+# lst.append(a)
+# lst.append(b)
+# lst.append(c)
+# lst.append(d)
+# lst.append(e)
+# z = max(lst)
+# y = min(lst)
+# print('Наименьшее число =', y)
+# print('Наибольшее число =', z)
+
+# print('Абсолютная сумма, Напишите программу, которая вычисляет сумму их модулей')
+# a, b, c, d, e = float(input()), float(input()), float(input()), float(input()), float(input())
+# print(abs(a) + abs(b) + abs(c) + abs(d) + abs(e))
+
+# print('Интересное число')
+# print('Назовём число интересным, если в нём разность максимальной ' \
+# 'и минимальной цифры равняется средней по величине цифре')
+
+# num = input()
+# a = float(num[0])
+# b = float(num[1])
+# c = float(num[2])
+# lst = []
+# lst.append(a)
+# lst.append(b)
+# lst.append(c)
+# x = min(lst)
+# y = max(lst)
+# q = lst.remove(x)
+# z = lst.remove(y)
+# w = float(lst[0])
+# if y - x == w:
+#     print('Число интересное')
+# else:
+#     print('Число неинтересное')
+
+# print('Сортировка трёх, Напишите программу, которая упорядочивает три числа от большего к меньшему')
+
+# a, b, c = int(input()), int(input()), int(input())
+# lst = []
+# lst.append(a)
+# lst.append(b)
+# lst.append(c)
+# lst.sort()
+# print(lst[2])
+# print(lst[1])
+# print(lst[0])
+
+# print('Манхэттенское расстояние, ' \
+# 'Расстояние городских кварталов между точками A и B — сумма модулей разностей координат точек A и B,')
+
+# p1, p2, q1, q2 = int(input()), int(input()), int(input()), int(input())
+# y = abs(p1 - q1) + abs(p2 - q2)
+# print(y)
