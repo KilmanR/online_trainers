@@ -172,3 +172,42 @@
 #         lst1.append(i)
 # print(lst1)
 
+# print('сумма элементов списка')
+# numbers = input().split(',')  # вводим строку
+# even_sum = 0                        
+# for num in numbers:
+#     if int(num) % 2 == 0:   
+#         even_sum += int(num)
+# print(even_sum)
+
+# print('перебор последовательности')
+# fruits = ['apple', 'banana', 'orange']
+# for i in range(len(fruits)):
+#     print(f'index {i}: {fruits[i]}')
+
+# print('перебор последовательности через enumerate()')
+# fruits = ['apple', 'banana', 'orange']
+# for index, fruit in enumerate(fruits):
+#     print(f'Index {index}: {fruit}')
+
+# lst = list(map(int, input().split(',')))
+# lst1 = []
+# for index, num in enumerate(lst):
+#     if num <= 50 or num % 5 == 0:
+#         lst1.append(index)
+# print(lst1)    
+
+# lst = ('cat', 'apple',  'dog', 'elephant', 'ant')
+# #lst = input().split()
+# lst1 = []
+# for index, value in enumerate(lst):
+#     if len(value) > 3 or value.startswith('a'):
+#         lst1.append(index)
+# print(lst1)
+
+# text = 'Hey'
+# for char in text:
+#     print(char)
+# for i in range(len(text)):
+#     print(f'position {i}: {text[i]}')
+

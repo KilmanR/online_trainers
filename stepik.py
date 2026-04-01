@@ -616,3 +616,29 @@
 # p1, p2, q1, q2 = int(input()), int(input()), int(input()), int(input())
 # y = abs(p1 - q1) + abs(p2 - q2)
 # print(y)
+
+
+# print('\"Python is a great language!\", said Fred. \"I don\'t ever remember having this much fun before.\"')
+
+# first_name = input('Введите ваше имя: ')
+# last_name = input('Введите вашу фамилию: ')
+# print('Hello, ' + first_name + ' ' + last_name + '! You have just delved into Python')
+
+# fc = input()
+# print('Футбольная команда ' + fc +  ' имеет длину ' + str(len(fc)) + ' символов')
+
+# city1 = input()
+# city2 = input()
+# city3 = input()
+# if len(city1) > len(city2) and len(city1) > len(city3):
+#     print(city1)
+# elif len(city2) > len(city3) and len(city2) > len(city1):
+#     print(city2)
+# elif len(city3) > len(city2) and len(city3) > len(city1):
+#     print(city3)
+# if len(city1) < len(city2) and len(city1) < len(city3):
+#     print(city1)
+# elif len(city2) < len(city3) and len(city2) < len(city1):
+#     print(city2)
+# elif len(city3) < len(city2) and len(city3) < len(city1):
+#     print(city3)
