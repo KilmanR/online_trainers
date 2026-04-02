@@ -642,3 +642,62 @@
 #     print(city2)
 # elif len(city3) < len(city2) and len(city3) < len(city1):
 #     print(city3)
+
+
+
+# print('Арифметические строки, Вводятся 3 строки в случайном порядке. ' \
+# 'Напишите программу, которая выясняет, можно ли из длин этих строк построить арифметическую прогрессию.')
+# a = len(input())
+# b = len(input())
+# c = len(input())
+
+# if (2 * b - c - a) * (2 * c - b - a) * (2 * a - b - c) == 0:
+#     print('YES')
+# else:
+#     print('NO')
+
+# s = 'https://pygen.ru/'
+# if 'a' in s:
+#     print('Введенная строка содержит символ а')
+# else:
+#     print('Введенная строка не содержит символ а')
+
+# s = input()
+# if '.' not in s:
+#     print('Введенная строка не содержит символа точки')
+
+# if s == 'a' or s == 'e' or s == 'i' or s == 'o' or s == 'u':
+#     print('YES')
+
+# print('тоже самое')
+
+# if len(s) == 1 and s in 'aeiou':
+#     print('YES')
+
+# s1 = 'Зеландия'
+# s2 = 'Новая Зеландия'
+# if s1 in s2:
+#     print('Строка', s1, 'является подстрокой для строки', s2)
+# else:
+#     print('Строка', s1, 'не является подстрокой для строки', s2)
+
+# s1 = input()
+# s2 = 'синий'
+# if s2 in s1:
+#     print('YES')
+# else:
+#     print('NO')
+
+# s1 = input()
+# s2 = 'суббота'
+# s3 = 'воскресенье'
+# if s2 in s1 or s3 in s1:
+#     print('YES')
+# else:
+#     print('NO')
+
+s = input()
+if '@' in s and '.' in s:
+    print('YES')
+else:
+    print('NO')

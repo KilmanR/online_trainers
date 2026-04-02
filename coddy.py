@@ -211,3 +211,10 @@
 # for i in range(len(text)):
 #     print(f'position {i}: {text[i]}')
 
+# print('Создайте программу, которая получает строку как ввод, ' \
+# 'и она печатает, сколько раз символ  (или P) встречается в строке.p')
+
+# text = input()
+# count = text.lower().count('p')
+# print(count)
+
