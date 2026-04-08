@@ -218,3 +218,159 @@
 # count = text.lower().count('p')
 # print(count)
 
+# print('создаём список из строки')
+# text = 'apple banana cherry'
+# fruits = text.split()         # разделение по пробелам
+# print(fruits)
+
+# data = 'john, 25, new york'
+# data = data.split(',')          # разделение по запятой
+# print(data)
+
+# print('обьединяем список в строку')
+
+# words = ['Hello', 'World', 'Python']
+# text = ' '.join(words)                  # соединяем через пробел
+# print(text)
+
+# fruits = ['apple', 'banana', 'cherry']
+# line = ','.join(fruits)                 # соединяем через запятую
+# print(line)
+
+# text = input()
+# delimiter = input()
+# t = text.split()
+# new_t = delimiter.join(t)
+# print(new_t)
+
+# numbers = input()
+# prefix = input()
+
+# num = numbers.split()
+
+# def add_prefix(num):
+#     return prefix + num
+# auto_prefix = [add_prefix(num) for i in num]
+# print(auto_prefix)
+
+# num = input()
+# pref = input()
+# num_list = num.split()
+# mod_num = [pref + i for i in num_list]
+# result = ' '.join(mod_num)
+# print(result)
+
+# lst = input().split(',')
+# def get_slice(lst):
+#     length = len(lst)
+#     if length == 0:
+#         return[]
+#     if length % 2 == 1:
+#         mid_index = length // 2
+#         start = max(0, mid_index - 1)
+#         end = min(length,mid_index + 2)
+#         return lst[start:end]
+#     else:
+#         mid_index = length // 2
+#         return lst[mid_index - 1: mid_index + 1]
+# result = get_slice(lst)
+# print(result)
+
+# red,orange,yellow.green,blue,purple,pink,brown,black,white,gray,violet,indigo,maroon,navy
+# print('срезы сисков')
+# lst = input().split(',')
+# lst1 = lst[1::3]
+# lst2 = lst[5::-1]
+# st = len(lst) // 2
+# lst3 = lst[st::2]
+# print(lst1)
+# print(lst2)
+# print(lst3)
+
+# 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+# original_list = input().split(',')
+# list1 = original_list[2::4]
+# list2 = original_list[2:-2]
+# list3 = original_list[-1::-2]
+# list4 = original_list[:3] + original_list[-3:]
+# print('List 1:', list1) # ['3', '7', '11', '15']
+# print('List 2:', list2) # ['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']
+# print('List 3:', list3) # ['15', '13', '11', '9', '7', '5', '3', '1']
+# print('List 4:', list4) # ['1', '2', '3', '13', '14', '15']
+
+# numbers = [1, 2, 3]
+# repeats = 2
+# def create_pattern(numbers, repeats):
+#     num_new = numbers + numbers
+#     num_new = num_new * repeats
+#     return
+# create_pattern(numbers, repeats)
+
+# numbers = input().split()
+# part1 = numbers + numbers[::-1]
+# first_element = numbers[0] if numbers else None
+# last_element = numbers[-1] if numbers else None
+# part2 = [first_element] + part1 + [last_element]
+# final_result = part2 * 2
+# print(final_result)
+
+# print("Welcome to the Daily Expense Tracker!")
+
+# # Отобразить меню один раз
+# print("\nMenu:")
+# print("1. Add a new expense")
+# print("2. View all expenses")
+# print("3. Calculate total and average expense")
+# print("4. Clear all expenses")
+# print("5. Exit")
+
+# # Инициализировать пустой список для хранения расходов
+# expenses = []
+
+# while True:
+#     # Получить выбор пользователя
+#     choice = input()
+    
+#     if choice == "1":
+#         # Добавить новый расход
+#         amount = float(input())
+#         expenses.append(amount)
+#         print("Expense added successfully!")
+
+#     elif choice == "2":
+#         # Просмотреть все расходы
+#         if len(expenses) == 0:
+#             print("No expenses recorded yet.")
+#         else:
+#             print("Your expenses:")
+#             for i in range(len(expenses)):
+#                 print(f"{i + 1}. {expenses[i]}")
+
+#     elif choice == "3":
+#         # Рассчитать общую и среднюю сумму расходов
+#         if len(expenses) == 0:
+#             print("No expenses recorded yet.")
+#         else:
+#             total = 0
+#             for expense in expenses:
+#                 total += expense
+#             average = total / len(expenses)
+#             print(f"Total expense: {total}")
+#             print(f"Average expense: {average}")
+
+#     elif choice == "4":
+#         # Очистить все расходы
+#         expenses = []
+#         print("All expenses cleared.")
+
+#     elif choice == "5":
+#         # Выйти из программы
+#         print("Exiting the Daily Expense Tracker. Goodbye!")
+#         break
+
+# print('пирамида звёздочек')
+# n = int(input())
+# for i in range(1, n + 1, 2):
+#     if n / 2 != 0:
+#         print('*' * i)
+

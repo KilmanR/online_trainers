@@ -22,3 +22,9 @@
 #     if bd == '15-07':
 #         special_discount = special_discount.replace('5%', '10%')
 # print(special_discount)
+
+# websites = ['mimo.com', 'cooding.com', 'food.org']
+# def add_https(site):
+#     return 'https://' + site
+# auto_add = [add_https(site) for site in websites]
+# print(auto_add)

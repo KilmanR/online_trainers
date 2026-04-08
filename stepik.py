@@ -696,8 +696,94 @@
 # else:
 #     print('NO')
 
-s = input()
-if '@' in s and '.' in s:
-    print('YES')
-else:
-    print('NO')
+# s = input()
+# if '@' in s and '.' in s:
+#     print('YES')
+# else:
+#     print('NO')
+
+# print('Тригонометрическое выражение')
+# import math
+# num = float(input())
+# x = (num * math.pi) / 180   # переводим градусы в радианы
+# y = math.sin(x) + math.cos(x) + math.tan(x) ** 2
+# print(y)
+
+# print('Правильный многоугольник')
+# import math
+# n = float(input())
+# a = float(input())
+# s = (n * (a ** 2)) / (4 * math.tan(math.pi / n))
+# print(s)
+
+# print('Средние значения')
+# import math
+# a = float(input())
+# b = float(input())
+# sa = (a + b) / 2
+# sg = math.sqrt(a * b)
+# sga = (2 * a * b) / (a + b)
+# sq = math.sqrt((a ** 2 + b ** 2) / 2)
+# print(sa)
+# print(sg)
+# print(sga)
+# print(sq)
+
+# print('Квадратное уравнение')
+# import math
+# a, b, c = float(input()), float(input()), float(input())
+# D = (b ** 2) - (4 * a * c)
+# if D < 0:
+#     print('Нет корней')
+# elif D == 0:
+#     x = - (b / (a * 2))
+#     print(x)
+# elif D > 0:
+#     x1 = (-b - math.sqrt(D)) / (a * 2)
+#     x2 = ((-b) + math.sqrt(D)) / (a * 2)
+#     if x1 > x2:
+#         print(x2, x1, sep='\n')
+#     else:
+#         print(x1, x2, sep='\n')
+
+# for i in range(27):
+#     j = i + 1
+#     print(i)
+# print(j)
+
+# total = 0
+# for i in range(3):
+#     total = total - i
+#     print(total)
+
+# total = 0
+# for i in range(10):
+#     total = total + i
+#     if i == 9:
+#         total = 1
+# print(total)
+
+# text = input()
+# for i in range(10):
+#     print(i, text)
+
+# print('Квадрат числа')
+# n = int(input())
+# for i in range(n + 1):
+#     print(f'Квадрат числа {i}  равен {i ** 2}')
+
+# print('Звёздный треугольник')
+# n = int(input())
+# for i in range(n):
+#     print('*' * (n-i))
+
+print('Популяция')  # a * (b / 100 + 1) ** i
+m = float(input())
+p = float(input())
+n = int(input())
+s = 0
+for i in range(n):
+   # m = m + m * p / 100
+   # s = m * (p / 100 +1) ** n
+    print(i+1, m + m * p / 100)
+
