@@ -777,13 +777,74 @@
 # for i in range(n):
 #     print('*' * (n-i))
 
-print('Популяция')  # a * (b / 100 + 1) ** i
-m = float(input())
-p = float(input())
-n = int(input())
-s = 0
-for i in range(n):
-   # m = m + m * p / 100
-   # s = m * (p / 100 +1) ** n
-    print(i+1, m + m * p / 100)
+# print('Популяция')  # a * (b / 100 + 1) ** i
+# m = float(input())
+# p = float(input())
+# n = int(input())
+# population = m
+# for day in range(1, n + 1):
+#    print (day, population)
+#    population = population + population * p / 100
 
+# print('Функция range() с одним параметром')
+# for i in range(10):
+#     print('Привет', i)   
+
+# print('Перегрузка range() с двумя параметрами')
+# for i in range(100, 1000):  # перебираем числа от 100 до 999
+#     if i % 10 == 7:         # используем остаток от деления на 10, для получения последней цифры
+#         print(i)
+
+# print('Перегрузка range() с 3 параметрами')
+# for i in range(56, 171, 2):
+#     print(i)
+# for i in range(56, 171):
+#     if i % 2 == 0:
+#         print(i)
+
+# print('Отрицательный шаг генерации')
+# for i in range(5, 0, -1):
+#     print(i, end=' ')
+# print('Взлетаем!!!')
+
+# print('Последовательность чисел 1')
+# m = int(input())
+# n = int(input())
+# for i in range(m, n + 1):
+#     print(i)
+
+# print('Таблица умножения')
+# num = int(input())
+# for i in range(10):
+#    x = (i+ 1) * num
+#    print(f"{num} * {i + 1} = {x}")
+
+# print('Последовательность чисел 2')
+# m = int(input())
+# n = int(input())
+# for i in range(m, n + 1):
+#    if i % 17 == 0:
+#       print(i)
+#    elif i % 15 == 0:
+#       print(i)
+#    elif i % 10 == 9:
+#       print(i)
+
+# print('Последовательность чисел 3 🌶️')
+# m, n = int(input()), int(input())
+# for i in range(m, n - 1, -1):
+#    if i % 2 != 0:
+#       print(i)
+
+# print('Последовательность чисел 4 🌶️')
+# m = int(input())
+# n = int(input())
+# if m < n:
+#    for i in range(m, n +1):
+#       print(i)
+# elif m > n:
+#    for i in range(m, n - 1, -1):
+#       print(i)
+# elif m == n:
+#    print(m)
+# уже лагает, слишком много строк)
