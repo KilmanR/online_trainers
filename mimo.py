@@ -28,3 +28,9 @@
 #     return 'https://' + site
 # auto_add = [add_https(site) for site in websites]
 # print(auto_add)
+
+# print('меняем слово в списке')
+# old_top_movies = 'The Power of the Dog - Trapped - Tenet'
+# new_top_movies = old_top_movies.replace('Trapped', 'Moonfall')
+# print(new_top_movies)
+

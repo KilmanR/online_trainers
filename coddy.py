@@ -374,3 +374,27 @@
 #     if n / 2 != 0:
 #         print('*' * i)
 
+# def find_occurrences(text, pattern):
+#     if not pattern:
+#         return(False, 0, [])
+#     occurrences = []
+#     start = 0
+#     while True:
+#         pos = text.find(pattern, start)
+#         if pos == -1:
+#             break
+#         occurrences.append(pos)
+#         start = pos + 1
+#         count = len(occurrences)
+#     found = count > 0
+#     return(found, count, occurrences)
+#     pass
+
+# # Чтение ввода
+# text = input()
+# pattern = input()
+
+# # Вызов вашей функции и вывод результата
+# result = find_occurrences(text, pattern)
+# print(result)
+
