@@ -398,3 +398,21 @@
 # result = find_occurrences(text, pattern)
 # print(result)
 
+# print('что купить')
+
+# prices = input().split(',')
+# for i in range(len(prices)):
+#     prices[i] = int(prices[i])
+
+# items = input().split(',')
+# budget_per_item = int(input())
+# affordable_items = []
+# cant_afford = 0
+# total_needed = 0
+
+# for i in range(len(prices)):
+#     if prices[i] <= budget_per_item:
+#         affordable_items.append(items[i])
+#         total_needed += prices[i]
+#     else:
+#         cant_afford += 1

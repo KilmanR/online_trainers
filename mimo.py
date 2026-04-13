@@ -34,3 +34,86 @@
 # new_top_movies = old_top_movies.replace('Trapped', 'Moonfall')
 # print(new_top_movies)
 
+# class Car:
+#     def __init__(self):
+#         self.on = False
+
+#     def injectFuel(self):
+#         print('Spraying fuel')
+
+#     def ingiteFuel(self):
+#         print('Boom!')
+    
+#     def startUp(self):
+#         self.on = True
+#         while self.on:
+#             self.injectFuel()
+#             self.ingiteFuel()
+
+# car = Car();
+# car.injectFuel()
+# car.ingiteFuel()
+# car.injectFuel()
+# car.ingiteFuel()
+
+# class Coffeemaker:
+#     def heatWater(self):
+#         print('Heating water')
+
+#     def brew(self):
+#         print('Adding water to grounds')
+
+#     def filterCoffee(self):
+#         print('Filtering coffee')
+
+#     def makeCoffee(self):
+#         self.heatWater()
+#         self.brew()
+#         self.filterCoffee()
+
+# coffeMaker = Coffeemaker()
+# coffeMaker.makeCoffee()
+
+# class IceCreamMaker:
+#     def churn(self):
+#         print('Churning cream')
+
+#     def freeze(self):
+#         print('Freezing cream')
+
+#     def makeIceCream(self):
+#         self.churn()
+#         self.freeze()
+
+# iceCreamMaker = IceCreamMaker()
+# iceCreamMaker.makeIceCream()
+
+# class Translator:
+#     def record(self):
+#         print('Recording audio')
+    
+#     def transcribeRecording(self):
+#         print('Converting audio to text')
+
+#     def translateText(self):
+#         print('Translating text')
+
+#     def translateLive(self):
+#         self.record()
+#         self.transcribeRecording()
+#         self.translateText()
+
+# class Slideshow:
+#     def __init__(self, slides):
+#         self.slides = slides
+#         self.current = 1
+
+#     def viewNextSlide(self):
+#         self.current += 1
+
+#     def play(self):
+#         while self.current <= self.slides:
+#             print('Slide', self.current)
+#             self.viewNextSlide()
+# slideshow = Slideshow()
+# slideshow.play()
