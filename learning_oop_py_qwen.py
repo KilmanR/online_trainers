@@ -264,6 +264,7 @@
 #         if self.battery_hours < 0:
 #             self.battery_hours = 0.0
 #         return f"Пульс: 72 уд/мин. Батарея после измерения: {self.battery_hours} ч"
+
 # print('\n=== ЗАДАНИЕ 2: Проверка ===')
 
 # phone = Smartphone("iPhone 15", 5, 256)
@@ -283,3 +284,91 @@
 
 # print(isinstance(phone, Device))      # True
 # print(isinstance(watch, Device))      # True
+
+print(' ЗАДАНИЕ 2.1: «Настройки, логи и статистика»')
+class Device:
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+        self.is_on = False
+        self.logs = []
+        self.settings = {'power_save': False, 'brightness': 50}
+        
+    def turn_on(self):
+        if not self.is_on:
+            self.is_on = True
+            self.logs.append(f"Device turned {'ON' if self.is_on else 'OFF'}")
+            return None
+        else:
+            return 'Устройство уже включено'
+        
+    def turn_off(self):
+        if self.is_on:
+            self.is_on = False
+            self.logs.append(f"Device turned {'ON' if self.is_on else 'OFF'}")
+            return None
+        else:
+            return 'Устройство уже выключено'    
+    
+    def get_status(self):
+        status = 'Включено' if self.is_on else 'Выключено'
+        return f"Устройство: {self.name}, Мощность: {self.power} Вт, Статус: {status}"
+    
+    def update_setting(self, key, value):
+        if key in self.settings:
+            self.settings[key] = value  
+            self.logs.append(f"Setting {key} changed to {value}")
+            return None
+        else:
+            return 'Ошибка: неизвестный параметр настройки'
+
+
+class Smartphone(Device):
+    def __init__(self, name, power, storage_gb):
+        self.storage_gb = storage_gb
+        super().__init__(name, power)
+        self.apps = []
+        self.contacts = {}
+
+    def get_status(self):
+        return super().get_status() + f" | Память: {self.storage_gb} ГБ, Приложений: {len(self.apps)}"
+    
+    def install_app(self, app_name):
+        if not self.is_on:
+            return 'Ошибка: включите устройство'            
+        if not isinstance(app_name, str) or len(app_name) == 0: # проверяем чтобы апп_наме была строкой и длинной больше 0
+            return 'Ошибка: некорректное имя приложения'            
+        if app_name in self.apps:
+            return 'Приложение уже установлено'            
+        self.apps.append(app_name)      # добавляем апп в список установленных
+        return None
+    
+    def add_contact(self, name, phone_num):        
+        if not isinstance(name, str) or not isinstance(phone_num, str) or len(name) == 0 or len(phone_num) == 0:
+            return 'Ошибка: имя и номер должны быть непустыми строками'
+        if name in self.contacts:
+            return 'Контакт уже существует'
+        self.contacts[name] = phone_num
+        self.logs.append(f"Контакт {name} добавлен: {phone_num}")
+        return None
+
+class SmartWatch(Device):
+    def __init__(self, name, power, battery_hours):
+        super().__init__(name, power)
+        self.battery_hours = battery_hours
+    def get_status(self):
+        return super().get_status() + f" | Батарея: {self.battery_hours} ч"
+    def track_heartbeat(self):
+        if not self.is_on:
+            return 'Ошибка: включите устройство'
+        self.battery_hours -= 0.5
+        if self.battery_hours < 0:
+            self.battery_hours = 0.0
+        return f"Пульс: 72 уд/мин. Батарея после измерения: {self.battery_hours} ч"
+    
+# phone = Smartphone("iPhone", 5, 128)
+# phone.turn_on()
+# print(phone.add_contact("Анна", "+79001112233"))  # None
+# print(phone.add_contact("", "+79001112233"))      # Ошибка: имя и номер...
+# print(phone.add_contact("Анна", "+79999999999"))  # Контакт уже существует
+# print(phone.logs)  # ['Device turned ON', 'Контакт Анна добавлен: +79001112233']
