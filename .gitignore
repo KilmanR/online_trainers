@@ -1,1 +1,19 @@
 test_oop_neto.py
+/rutube_audio
+/Rutube_audio_GUI
+# Виртуальное окружение
+venv/
+__pycache__/
+*.pyc
+
+# Папки с музыкой (укажите ваши названия)
+Music/
+audio/
+mp3/
+*.mp3
+# IDE
+.vscode/
+.idea/
+
+# Логи
+*.log
