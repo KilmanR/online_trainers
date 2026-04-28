@@ -6,27 +6,27 @@
 
 ## 🐍 Python и разработка
 
-### [Основы языка программирования](certificate/python-basics.pdf)
-### [Основы Python: создаём телеграмбота](certificate/python-telegram-bot.pdf)
-### [ООП и работа с API](certificate/oop-and-api.pdf)
+### [Основы языка программирования](certificate/python-basics_opt.pdf)
+### [Основы Python: создаём телеграмбота](certificate/python-telegram-bot_opt.pdf)
+### [ООП и работа с API](certificate/oop-and-api_opt.pdf)
 
 ---
 
-## 🌳 Git и алгоритмы
+##  Git и алгоритмы
 
-### [Git — система контроля версий](certificate/git-version-control.pdf)
-### [Основы Git OTUS](certificate/git-otus.pdf)
-### [Основы алгоритмики](certificate/algorithms-basics.pdf)
-### [Основы алгоритмических структур](certificate/algorithm-structures.pdf)
+### [Git — система контроля версий](certificate/git-version-control_opt.pdf)
+### [Основы Git OTUS](certificate/git-otus_opt.pdf)
+### [Основы алгоритмики](certificate/algorithms-basics_opt.pdf)
+### [Основы алгоритмических структур](certificate/algorithm-structures_opt.pdf)
 
 ---
 
 ## 🛡️ ИТ-грамотность и безопасность
 
-### [Компьютерная грамотность](certificate/computer-literacy.pdf)
-### [Основы безопасности в сети](certificate/network-security-basics.pdf)
-### [Основы работы современных LLM](certificate/llm-fundamentals.pdf)
+### [Компьютерная грамотность](certificate/computer-literacy_opt.pdf)
+### [Основы безопасности в сети](certificate/network-security-basics_opt.pdf)
+### [Основы работы современных нейросетей](certificate/llm-fundamentals_opt.pdf)
 
 ---
 
-> 💡 Все файлы находятся в папке `certificate/`. Ссылки работают локально и на GitHub.
+> 💡 Все файлы находятся в папке `certificate/`. Ссылки ведут на оптимизированные версии (`_opt.pdf`).
