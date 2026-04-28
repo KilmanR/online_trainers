@@ -6,26 +6,27 @@
 
 ## 🐍 Python и разработка
 
-### [Основы языка программирования](certificate/Основы языка программирования.pdf)
-### [Основы Python: создаём телеграмбота](certificate/Основы Python создаём телеграмбота.pdf)
-### [ООП и работа с API](certificate/ООП и работа с API.pdf)
+### [Основы языка программирования](certificate/python-basics.pdf)
+### [Основы Python: создаём телеграмбота](certificate/python-telegram-bot.pdf)
+### [ООП и работа с API](certificate/oop-and-api.pdf)
 
 ---
 
 ## 🌳 Git и алгоритмы
 
-### [Git — система контроля версий](certificate/Git — система контроля версий.pdf)
-### [Основы Git OTUS](certificate/Основы Git OTUS.pdf)
-### [Основы алгоритмики](certificate/Основы алгоритмики.pdf)
-### [Основы алгоритмических структур](certificate/Основы алгоритмических структур.pdf)
+### [Git — система контроля версий](certificate/git-version-control.pdf)
+### [Основы Git OTUS](certificate/git-otus.pdf)
+### [Основы алгоритмики](certificate/algorithms-basics.pdf)
+### [Основы алгоритмических структур](certificate/algorithm-structures.pdf)
 
 ---
 
 ## 🛡️ ИТ-грамотность и безопасность
 
-### [Компьютерная грамотность](certificate/Компьютерная грамотность.pdf)
-### [Основы безопасности в сети](certificate/Основы безопасности в сети.pdf)
-### [Основы работы современных нейростей](certificate/Основы работы современных.pdf)
+### [Компьютерная грамотность](certificate/computer-literacy.pdf)
+### [Основы безопасности в сети](certificate/network-security-basics.pdf)
+### [Основы работы современных LLM](certificate/llm-fundamentals.pdf)
 
 ---
->  Все файлы находятся в папке `certificate/`. Ссылки работают локально и после пуша на GitHub откроются прямо в браузере.
+
+> 💡 Все файлы находятся в папке `certificate/`. Ссылки работают локально и на GitHub.
