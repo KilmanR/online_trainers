@@ -1,32 +1,38 @@
 # 📜 Мои сертификаты
 
-> ✅ Список завершённых курсов. Нажмите на название, чтобы открыть PDF.
+> ✅ Список завершённых курсов. Нажмите на название, чтобы открыть JPG.
 
 ---
 
 ## 🐍 Python и разработка
 
-### [Основы языка программирования](certificate/python-basics_opt.pdf)
-### [Основы Python: создаём телеграмбота](certificate/python-telegram-bot_opt.pdf)
-### [ООП и работа с API](certificate/oop-and-api_opt.pdf)
+### [Основы языка программирования](certificate_jpg/python-basics.jpg)
+### [Основы Python: создаём телеграмбота](certificate_jpg/python-telegram-bot.jpg)
+### [ООП и работа с API](certificate_jpg/oop-and-api.jpg)
 
 ---
 
-##  Git и алгоритмы
+## ️ Базы данных и SQL
 
-### [Git — система контроля версий](certificate/git-version-control_opt.pdf)
-### [Основы Git OTUS](certificate/git-otus_opt.pdf)
-### [Основы алгоритмики](certificate/algorithms-basics_opt.pdf)
-### [Основы алгоритмических структур](certificate/algorithm-structures_opt.pdf)
+### [Основы SQL](certificate_jpg/SQL_basic_OTUS.jpg)
+
+---
+
+## 🔧 Git и алгоритмы
+
+### [Git — система контроля версий](certificate_jpg/git-version-control.jpg)
+### [Основы Git OTUS](certificate_jpg/git-otus.jpg)
+### [Основы алгоритмики](certificate_jpg/algorithms-basics.jpg)
+### [Основы алгоритмических структур](certificate_jpg/algorithm-structures.jpg)
 
 ---
 
 ## 🛡️ ИТ-грамотность и безопасность
 
-### [Компьютерная грамотность](certificate/computer-literacy_opt.pdf)
-### [Основы безопасности в сети](certificate/network-security-basics_opt.pdf)
-### [Основы работы современных нейросетей](certificate/llm-fundamentals_opt.pdf)
+### [Компьютерная грамотность](certificate_jpg/computer-literacy.jpg)
+### [Основы безопасности в сети](certificate_jpg/network-security-basics.jpg)
+### [Основы работы современных нейросетей](certificate_jpg/llm-fundamentals.jpg)
 
 ---
 
-> 💡 Все файлы находятся в папке `certificate/`. Ссылки ведут на оптимизированные версии (`_opt.pdf`).
+> 💡 Все файлы находятся в папке `certificate_jpg/` в формате JPG для быстрого просмотра на телефоне.
