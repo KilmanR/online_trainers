@@ -96,7 +96,7 @@
 #         print(nick)
 #         break
 
-print('Сколько ждать? ⏱️')
+# print('Сколько ждать? ⏱️')
 # count = 0
 # found_alexandra = False
 # while True:
@@ -114,4 +114,98 @@ print('Сколько ждать? ⏱️')
 #         if found_alexandra:
 #             count += 1
 
+
+# print('Ведьмаку заплатите чеканной монетой')
+# print('Всем известно, что ведьмак способен одолеть любых чудовищ, однако его услуги обойдутся недешево. К тому же ведьмак не принимает купюры, он принимает только чеканные монеты. В мире ведьмака существуют монеты с номиналами 1,5,10,25.Напишите программу, которая определяет, какое минимальное количество чеканных монет нужно заплатить ведьмаку.')
     
+# total = int(input())
+# count = 0
+# while total > 0:
+#     if total >= 25:
+#         total -= 25
+#         count += 1
+#     elif total >= 10:
+#         total -= 10
+#         count += 1
+#     elif total >= 5:
+#         total -= 5
+#         count += 1
+#     else:
+#         total -= 1
+#         count += 1
+# print(count)
+
+# print('Временной промежуток')
+# h1, m1, h2, m2 = int(input()), int(input()), int(input()), int(input())
+# start = (h1 * 60) + m1
+# end = (h2 * 60) + m2
+# while start <= end:
+#     h = start // 60
+#     m = start % 60
+#     print(f'{h:02d}:{m:02d}')
+#     start += 1
+
+# num = 1576
+# has_seven = False                                 # сигнальная метка (флаг)
+# while num != 0:
+#     last_digit = num % 10
+#     if last_digit == 7:
+#         has_seven = True
+#     num = num // 10
+# if has_seven == True:
+#     print('YES')
+# else:
+#     print('NO')
+
+# num = 8619
+# n = len(str(num))
+# for i in range(1, n + 1):
+#     digit = num // 10 ** (n - i) % 10
+#     print(i, '-я', ' цифра равна ', digit, sep='')
+# 1-я цифра равна 8
+# 2-я цифра равна 6
+# 3-я цифра равна 1
+# 4-я цифра равна 9
+
+# num = 813
+# while num > 0:
+#     last_digit = num % 10
+#     num //= 10
+#     print(last_digit, sep='=', end='')
+# num = 1265
+# while num > 0:
+#     last_digit = num % 10
+#     if last_digit % 2 == 0:
+#         print(last_digit)
+#     num //= 10
+# num = 1765
+# while num > 0:
+#     last_digit = num % 10
+#     if 5 <= last_digit <= 9:
+#         print('+', end='')
+#     num //= 10
+# num = 12345
+# product = 1
+# while num != 0:
+#     last_digit = num % 10
+#     product = product * last_digit
+#     num = num // 10
+# print(product)
+# num = 725
+# while num != 0:
+#     last_digit = num % 10
+#     num //= 10
+#     print(last_digit, sep='', end='$')
+# num = 586
+# while num > 0:
+#     last_digit = num % 10
+#     print(last_digit, sep='*', end='#')
+#     num //= 10
+#     print()
+
+print('Обратный порядок 1')
+num = int(input())
+while num > 0:
+    l_d = num % 10
+    print(l_d)
+    num //= 10
