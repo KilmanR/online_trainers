@@ -203,9 +203,51 @@
 #     num //= 10
 #     print()
 
-print('Обратный порядок 1')
-num = int(input())
-while num > 0:
-    l_d = num % 10
-    print(l_d)
-    num //= 10
+# print('Обратный порядок 1')
+# num = int(input())
+# while num > 0:
+#     l_d = num % 10
+#     print(l_d)
+#     num //= 10
+
+# print('max и min')
+# num = int(input())
+# num_list = []
+# while num > 0:
+#     last_digit = num % 10
+#     num_list.append(last_digit)
+#     num //= 10
+# num_list.sort()
+# print(f'Максимальная цифра равна {num_list[-1]}\nМинимальная цифра равна {num_list[0]}')
+
+# print('Все вместе')
+# num = int(input())
+# num_list = []
+# while num > 0:
+#     last_digit = num % 10
+#     num_list.append(last_digit)
+#     num //= 10
+# sum_num_list = sum(num_list)
+# prod = 1
+# for num in num_list:
+#     prod *= num
+# prod_num = prod
+# len_num = len(num_list)
+# arg_num = sum_num_list / len_num
+# first_num = num_list[-1]
+# sum_first_end_digit = num_list[0] + num_list[-1]
+# print(sum_num_list)
+# print(len_num)
+# print(prod_num)
+# print(arg_num)
+# print(first_num)
+# print(sum_first_end_digit)
+
+# print('Вторая цифра')
+# num = int(input())
+# num_list = []
+# while num > 0:
+#     last_digit = num % 10
+#     num_list.append(last_digit)
+#     num //= 10
+# print(num_list[-2])
