@@ -14,7 +14,7 @@
 
 ## ️ Базы данных и SQL
 
-### [Основы SQL](certificate_jpg/SQL_basic_OTUS.jpg)
+### [Основы SQL](certificate_jpg/SQL_basic_OTUS_fixed.jpg)
 
 ---
 
@@ -32,7 +32,7 @@
 ### [Компьютерная грамотность](certificate_jpg/computer-literacy.jpg)
 ### [Основы безопасности в сети](certificate_jpg/network-security-basics.jpg)
 ### [Основы работы современных нейросетей](certificate_jpg/llm-fundamentals.jpg)
-
+### [Основы организации программных решений](certificate_jpg/Basics_of_software_solution_design.jpg)
 ---
 
 > 💡 Все файлы находятся в папке `certificate_jpg/` в формате JPG для быстрого просмотра на телефоне.
