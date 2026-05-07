@@ -1,6 +1,4 @@
 test_oop_neto.py
-/rutube_audio
-/Rutube_audio_GUI
 # Виртуальное окружение
 venv/
 __pycache__/
@@ -17,3 +15,7 @@ mp3/
 
 # Логи
 *.log
+certificate/
+PYAPI_Homework/
+rutube_audio/
+Rutube_audio_GUI/
