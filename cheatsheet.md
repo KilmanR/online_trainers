@@ -51,3 +51,9 @@ git pull
 
 # История коммитов в компактном виде
 git log --oneline
+
+# Делаем дубль на гитвёрс
+git push origin && git push gitverse
+
+# Пушим сразу на оба ресурса
+git pushall
