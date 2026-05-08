@@ -3,7 +3,7 @@ test_oop_neto.py
 venv/
 __pycache__/
 *.pyc
-
+*.json
 # Папки с музыкой (укажите ваши названия)
 Music/
 audio/
