@@ -276,3 +276,356 @@
 # for i in range(1, n + 1):                         # проходим по всем разрядам числа от 1 до n
 #     digit = num // 10 ** (n - i) % 10             # получаем i-ю цифру числа
 #     ...                                           # обрабатываем i-ю цифру числа
+
+# num = int(input())
+# flag = True
+
+# for i in range(2, num):
+#     if num % i == 0:        #  если исходное число делится на какое-либо отличное от 1 и самого себя
+#         flag = False
+#         break               # останавливаем цикл если встретили делитель числа        
+
+# if flag:  # эквивалентно if flag == True:
+#     print('Число простое')
+# else:
+#     print('Число составное')
+
+# result = 0
+# for i in range(10):
+#     num = int(input())
+#     if num < 0:
+#         break
+#     result += num
+# print(result)
+
+# num = int(input())
+# number = num
+# flag = False
+# while num != 0:
+#     last_digit = num % 10
+#     if last_digit == 7:
+#         flag = True
+#         break        # прерываем цикл, так как число гарантированно содержит цифру 7
+#     num //= 10
+
+# if flag:  # эквивалентно if flag == True:
+#     print('Число', number, 'содержит цифру 7')
+# else:
+#     print('Число', number, 'не содержит цифру 7')
+
+# while True:
+#     if условие 1:  # условие для остановки цикла
+#         break
+#     ...
+#     if условие 2:  # еще одно условие для остановки цикла
+#         break
+#     ...
+#     if условие 3:  # еще одно условие для остановки цикла
+#         break
+
+# for i in range(1, 101):
+#     if i == 7 or i == 17 or i == 29 or i == 78:
+#         continue  # переходим на следующую итерацию
+#     print(i)
+
+# num = 1964
+# while num != 0:
+#     last_digit = num % 10
+#     num //= 10
+
+#     if last_digit % 3 == 0:
+#         print(last_digit)
+#         break
+# num = 3281
+# while num != 0:
+#     print(num % 10, end='')
+#     num //= 100
+#     if num != 0:
+#         continue
+# for i in range(10):
+#     print(i, end='*')
+#     if i > 6:
+#         break
+# i = 100
+# while i > 0:
+#     if i == 40:
+#         break
+#     print(i, end='*')
+# #     i -= 20
+# n = 10
+# while n > 0:
+#     n -= 1
+#     if n == 2:
+#         continue
+#     print(n, end='*')
+# result = 0
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#     result += i
+# print(result)
+# mult = 1
+# for i in range(1, 11):
+#     if i % 2 == 0:
+#         continue
+#     if i % 9 == 0:
+#         break
+#     mult *= i
+# print(mult)
+# print('Наименьший делитель')
+# num = int(input())
+# for i in range(2, num + 1):
+#     if num % i == 0:
+#         break
+# print(i)
+
+# print('Следуй правилам')
+# num = int(input())
+# for i in range(1, num + 1):
+#     if 5 <= i <= 9:
+#         continue
+#     if 17 <= i <= 37:
+#         continue
+#     if 78 <= i <= 87:
+#         continue
+#     print(i)
+# n = 5
+# while n > 0:
+#     n -= 1
+#     print(n)
+# else:
+# #     print('Цикл завершен.')
+# num = int(input())
+# n = num
+# flag = False
+# while n != 0:
+#     last = n % 10
+#     if last == 7:
+#         flag = True
+#         break        # прерываем цикл, так как число гарантированно содержит цифру 7
+#     n //= 10
+
+# if flag == True:
+#     print('Число', num, 'содержит цифру 7')
+# else:
+# #     print('Число', num, 'не содержит цифру 7')
+# num = int(input())
+# n = num
+# while n != 0:
+#     last = n % 10
+#     if last == 7:
+#         print('Число', num, 'содержит цифру 7')
+#         break
+#     n //= 10
+# else:
+#     print('Число', num, 'не содержит цифру 7')
+# num = 3
+# while num < 8:
+#     num += 1
+# else:
+#     print('Цикл завершен.')
+
+# print(num)
+# num = 3
+# total = 0
+# for i in range(num):
+#     if i % 2 == i:
+#         total += 1
+# else:
+#     print(total)
+
+# print(total + 1)
+# num = 4
+# while num < 10:
+#     num += 2
+#     print(num)
+# else:
+#     print('Цикл завершен.')
+# num = 7
+# while num < 12:
+#     num += 2
+#     if num == 11:
+#         break
+#     print(num)
+# else:
+#     print('Цикл завершен.')
+# num = 2
+# while True:
+#     num += 1
+#     if num >= 5:
+#         break
+#     print(num)
+# else:
+#     print('Цикл завершен.')
+# for i in range(5):
+#     print(str(i) * 2)
+#     if i >= 2:
+#         break
+# Производительность кода
+# num = int(input())
+# flag = True
+
+# for i in range(2, num):
+#     if num % i == 0:
+#         flag = False
+
+# if num == 1:
+#     print('Число равно 1')
+# elif flag == True:
+#     print('Число простое')
+# else:
+#     print('Число составное')
+# # better
+# num = int(input())
+# flag = True
+
+# for i in range(2, num // 2 + 1):
+#     if num % i == 0:
+#         flag = False
+
+# if num == 1:
+#     print('Число равно 1')
+# elif flag == True:
+#     print('Число простое')
+# else:
+#     print('Число составное')
+# # better 
+# num = int(input())
+# flag = True
+
+# for i in range(2, int(num ** 0.5) + 1):
+#     if num % i == 0:
+#         flag = False
+
+# if num == 1:
+#     print('Число равно 1')
+# elif flag == True:
+#     print('Число простое')
+# else:
+#     print('Число составное')
+# n = int(input())
+# while n > 10:
+#     n //= 10
+# print(n)
+# s = 0
+# for i in range(7):
+#     n = int(input())
+#     if n % 2 == 0:
+#         s = s + n
+# print(s)
+
+# n = int(input())
+# max_digit = -1
+# while n > 0:
+#     digit = n % 10
+#     if digit % 3 == 0:
+#         if digit > max_digit:
+#             max_digit = digit
+#     n = n // 10
+# if max_digit == -1:
+#     print('NO')
+# else:
+#     print(max_digit)
+
+# s = input()
+# while len(s) < 10:
+#     if len(s) % 4 == 0:
+#         s = s + 'x'
+#     elif len(s) % 5 == 0:
+#         s = s + 'y'
+#     else:
+#         s = 'z' + s  
+# s = '@' + s
+# print(s)
+# #  eleven  -  @zzzelevenx
+# #  mike  -  @zzzmikexyx
+
+# print('Цифровые сообщения')
+# num = int(input())
+# cnt = 0
+# total = 1
+# while num % 100 != 11:
+#     if len(str(num)) > 7:
+#         cnt += 1
+#     total += 1
+#     num = int(input())    
+# if len(str(num)) > 7:
+#     cnt += 1    
+# print(cnt, '/', total, sep='')
+
+# print('Ревью кода-6 🌶️🌶️')
+# mx = -100001
+# s = 0
+# for i in range(10):
+#     x = int(input())
+#     if x < 0:
+#         s += x
+#         if x > mx:
+#             mx = x
+# if s < 0:            
+#     print(s)
+#     print(mx)
+# else:
+#     print('NO')
+
+# for i in range(8):
+#     for j in range(6):
+#         print('*', end='')
+#     print()
+# for i in range(8):
+#     for j in range(i + 1):
+#         print('*', end='')
+#     print()
+# for i in range(2):
+#     for j in range(3):
+#         print('C' * i + '+' * j)
+# for i in range(1, 2):
+#     print(i * 'C')
+
+#     for j in range(2, 4):
+#         print(j * '♨️')
+
+#     for k in range(3, 1, -1):
+#         print(k * '🐳')
+
+# print('#')
+# for i in range(1, 3):
+#     for j in range(1, 3):
+#         print(i * '🐍' + j * '🐝')
+
+#     print(i * '🦀')
+# for i in range(2):
+#     print(i, end='*')
+#     for j in range(2):
+#         print('/', end='+')
+# for i in range(2):
+#     for j in range(2):
+#         print('*', end='#')
+
+#     for k in range(3):
+#         print('%', end='&')
+
+#     print()
+# for i in range(1, 4):
+#     for j in range(3, 5):
+#         print(i + j, end='')
+# counter = 0
+# for i in range(99, 102):
+#     temp = i
+#     while temp > 0:
+#         counter += 1
+#         temp //= 10
+
+# print(counter)
+# print('Таблица-1')
+# num = int(input())
+# for i in range (num):
+# #    for j in range(3):
+#     print(num, num, num )
+
+# print('Таблица-2')
+# num = int(input())
+# for i in range (1, num + 1):
+#     print(i, i, i, i, i )
+
+print('Таблица-3')
