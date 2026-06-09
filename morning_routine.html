@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Утренняя зарядка + растяжка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 30px;
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 22px;
+        }
+
+        h1 {
+            color: #89b4fa;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #a6adc8;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .streak-container {
+            background: linear-gradient(135deg, #f38ba8, #fab387);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .streak-value {
+            font-size: 56px;
+            font-weight: bold;
+            color: #1e1e2e;
+            line-height: 1;
+        }
+
+        .streak-label {
+            font-size: 18px;
+            color: #1e1e2e;
+            margin-top: 5px;
+        }
+
+        .streak-btn {
+            background: #1e1e2e;
+            color: #a6e3a1;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .streak-btn:hover {
+            background: #313244;
+            transform: translateY(-2px);
+        }
+
+        .streak-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: #313244;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #a6e3a1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #a6adc8;
+        }
+
+        .progress-container {
+            background: #313244;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #45475a;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #a6e3a1, #89b4fa);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 16px;
+            color: #a6adc8;
+            margin-top: 10px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: #f9e2af;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #45475a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-icon {
+            font-size: 28px;
+        }
+
+        .exercise {
+            background: #313244;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .exercise.completed {
+            opacity: 0.5;
+            background: #2a2b3d;
+        }
+
+        .exercise-number {
+            background: #89b4fa;
+            color: #1e1e2e;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .exercise-content {
+            flex: 1;
+        }
+
+        .exercise-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #cdd6f4;
+            margin-bottom: 8px;
+        }
+
+        .exercise-desc {
+            font-size: 20px;
+            color: #a6adc8;
+            margin-bottom: 10px;
+        }
+
+        .exercise-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+
+        .meta-item {
+            background: #45475a;
+            padding: 6px 12px;
+            border-radius: 8px;
+            color: #cdd6f4;
+        }
+
+        .meta-item.time {
+            background: #a6e3a1;
+            color: #1e1e2e;
+            font-weight: 600;
+        }
+
+        .checkbox {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #45475a;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            font-size: 20px;
+            color: transparent;
+        }
+
+        .checkbox:hover {
+            border-color: #89b4fa;
+        }
+
+        .checkbox.checked {
+            background: #a6e3a1;
+            border-color: #a6e3a1;
+            color: #1e1e2e;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .control-btn {
+            background: #89b4fa;
+            color: #1e1e2e;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.2s ease;
+        }
+
+        .control-btn:hover {
+            background: #74c7ec;
+            transform: translateY(-2px);
+        }
+
+        .control-btn.reset {
+            background: #f38ba8;
+        }
+
+        .control-btn.reset:hover {
+            background: #eba0ac;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            .exercise {
+                padding: 15px;
+            }
+            .controls {
+                bottom: 10px;
+                right: 10px;
+            }
+            .streak-value {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🌅 Утренняя зарядка + растяжка</h1>
+    <p class="subtitle">10-15 минут • Без инвентаря (кроме турника) • Для слэклайна и здоровья</p>
+
+    <div class="streak-container">
+        <div class="streak-value" id="streakValue">0</div>
+        <div class="streak-label">дней подряд 🔥</div>
+        <button class="streak-btn" id="completeBtn" onclick="completeDay()">✅ Завершить день</button>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-value" id="completedCount">0</div>
+            <div class="stat-label">Выполнено</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">14</div>
+            <div class="stat-label">Всего упражнений</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">~12</div>
+            <div class="stat-label">Минут</div>
+        </div>
+    </div>
+
+    <div class="progress-container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 16px; color: #a6adc8;">Прогресс</span>
+            <span style="font-size: 16px; color: #a6e3a1; font-weight: 600;" id="progressPercent">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">Начни с первого упражнения 👇</div>
+    </div>
+
+    <!-- РАЗМИНКА -->
+    <div class="section">
+        <div class="section-title">
+            <span class="section-icon"></span>
+            Разминка (2-3 минуты)
+        </div>
+
+        <div class="exercise" data-id="1">
+            <div class="exercise-number">1</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Повороты головы</div>
+                <div class="exercise-desc">Медленно поворачивай голову влево-вправо, затем вверх-вниз. Без резких движений!</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 1)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="2">
+            <div class="exercise-number">2</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Круговые движения плечами</div>
+                <div class="exercise-desc">Подними плечи и делай круговые движения вперёд, затем назад. Амплитуда максимальная.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз в каждую сторону</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 2)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="3">
+            <div class="exercise-number">3</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Вращение тазом</div>
+                <div class="exercise-desc">Руки на поясе, ноги на ширине плеч. Делай широкие круги тазом в одну сторону, потом в другую.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз в каждую сторону</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 3)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="4">
+            <div class="exercise-number">4</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Вращение коленями</div>
+                <div class="exercise-desc">Ноги вместе, руки на коленях. Делай круговые движения коленями. Мягко, без боли!</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз в каждую сторону</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 4)">✓</div>
+        </div>
+    </div>
+
+    <!-- ОСНОВНЫЕ УПРАЖНЕНИЯ -->
+    <div class="section">
+        <div class="section-title">
+            <span class="section-icon">💪</span>
+            Основные упражнения (5-7 минут)
+        </div>
+
+        <div class="exercise" data-id="5">
+            <div class="exercise-number">5</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Наклоны в стороны</div>
+                <div class="exercise-desc">Встань прямо, руки подними вверх. Делай наклоны влево и вправо, чувствуя растяжение бока.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 5)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="6">
+            <div class="exercise-number">6</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Наклоны вперёд</div>
+                <div class="exercise-desc">Стоя, ноги на ширине плеч. Наклоняйся вперёд, тянись руками к полу. Колени можно слегка согнуть.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 6)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="7">
+            <div class="exercise-number">7</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Приседания</div>
+                <div class="exercise-desc">Неглубокие приседания. Спина прямая, колени НЕ выходят за носки. Вес на пятках.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">15 раз</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 7)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="8">
+            <div class="exercise-number">8</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Отжимания от стены</div>
+                <div class="exercise-desc">Встань в шаге от стены, упрись руками. Сгибай и разгибай руки. Легче, чем от пола.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">15 раз</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 8)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="9">
+            <div class="exercise-number">9</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Планка</div>
+                <div class="exercise-desc">Упор на предплечья и носки. Тело — прямая линия. Живот втянут, ягодицы напряжены.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item time">30 сек</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 9)">✓</div>
+        </div>
+    </div>
+
+    <!-- РАСТЯЖКА -->
+    <div class="section">
+        <div class="section-title">
+            <span class="section-icon"></span>
+            Растяжка (3-5 минут)
+        </div>
+
+        <div class="exercise" data-id="10">
+            <div class="exercise-number">10</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Вис на турнике</div>
+                <div class="exercise-desc">Повисни на турнике, расслабь спину. Ноги можно согнуть. Отлично decompresses позвоночник после сна.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item time">20 сек</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 10)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="11">
+            <div class="exercise-number">11</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Растяжка шеи</div>
+                <div class="exercise-desc">Наклони голову к правому плечу, можно слегка помочь рукой. Задержи, потом поменяй сторону.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз на сторону</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 11)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="12">
+            <div class="exercise-number">12</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Вращения грудным отделом</div>
+                <div class="exercise-desc">Руки сцеплены в замок и подняты вверх. Вращай верхней и средней частью спины по часовой стрелке, затем против.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз в каждую сторону</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 12)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="13">
+            <div class="exercise-number">13</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Растяжка квадрицепса стоя</div>
+                <div class="exercise-desc">Держись за стену или турник. Согни правую ногу, возмись за стопу, подтяни пятку к ягодице. Колено смотрит вниз!</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз на ногу</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 13)">✓</div>
+        </div>
+
+        <div class="exercise" data-id="14">
+            <div class="exercise-number">14</div>
+            <div class="exercise-content">
+                <div class="exercise-name">Растяжка икр</div>
+                <div class="exercise-desc">Упрись руками в стену. Одна нога впереди согнута, другая сзади прямая, пятка прижата к полу. Тяни икру.</div>
+                <div class="exercise-meta">
+                    <span class="meta-item">10 раз на ногу</span>
+                </div>
+            </div>
+            <div class="checkbox" onclick="toggleExercise(this, 14)">✓</div>
+        </div>
+    </div>
+
+    <script>
+        const totalExercises = 14;
+        let completedExercises = new Set();
+        let streak = 0;
+        let lastCompletedDate = null;
+
+        function toggleExercise(checkbox, id) {
+            checkbox.classList.toggle('checked');
+            const exercise = checkbox.closest('.exercise');
+            
+            if (checkbox.classList.contains('checked')) {
+                completedExercises.add(id);
+                exercise.classList.add('completed');
+            } else {
+                completedExercises.delete(id);
+                exercise.classList.remove('completed');
+            }
+            
+            updateProgress();
+            saveProgress();
+        }
+
+        function updateProgress() {
+            const count = completedExercises.size;
+            const percent = Math.round((count / totalExercises) * 100);
+            
+            document.getElementById('completedCount').textContent = count;
+            document.getElementById('progressPercent').textContent = percent + '%';
+            document.getElementById('progressFill').style.width = percent + '%';
+            
+            const progressText = document.getElementById('progressText');
+            if (count === 0) {
+                progressText.textContent = 'Начни с первого упражнения 👇';
+            } else if (count < totalExercises) {
+                progressText.textContent = `Отлично! Осталось ${totalExercises - count} упражнений 💪`;
+            } else {
+                progressText.textContent = '🎉 Все упражнения выполнены!';
+            }
+        }
+
+        function completeDay() {
+            const today = new Date().toDateString();
+            
+            if (lastCompletedDate === today) {
+                alert('Ты уже завершил день сегодня! Возвращайся завтра 🌅');
+                return;
+            }
+            
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            
+            if (lastCompletedDate === yesterday.toDateString()) {
+                streak++;
+            } else {
+                streak = 1;
+            }
+            
+            lastCompletedDate = today;
+            updateStreak();
+            saveProgress();
+            
+            document.getElementById('completeBtn').disabled = true;
+            document.getElementById('completeBtn').textContent = '✅ День завершён';
+            
+            alert(`🔥 Отлично! ${streak} ${getDayWord(streak)} подряд!`);
+        }
+
+        function getDayWord(count) {
+            if (count === 1) return 'день';
+            if (count >= 2 && count <= 4) return 'дня';
+            return 'дней';
+        }
+
+        function updateStreak() {
+            document.getElementById('streakValue').textContent = streak;
+            
+            const today = new Date().toDateString();
+            const btn = document.getElementById('completeBtn');
+            
+            if (lastCompletedDate === today) {
+                btn.disabled = true;
+                btn.textContent = '✅ День завершён';
+            } else {
+                btn.disabled = false;
+                btn.textContent = '✅ Завершить день';
+            }
+        }
+
+        function resetAll() {
+            if (!confirm('Сбросить весь прогресс? Счётчик дней тоже обнулится!')) return;
+            
+            document.querySelectorAll('.checkbox').forEach(cb => {
+                cb.classList.remove('checked');
+            });
+            document.querySelectorAll('.exercise').forEach(ex => {
+                ex.classList.remove('completed');
+            });
+            
+            completedExercises.clear();
+            streak = 0;
+            lastCompletedDate = null;
+            
+            updateProgress();
+            updateStreak();
+            saveProgress();
+        }
+
+        function saveProgress() {
+            localStorage.setItem('morningRoutine', JSON.stringify([...completedExercises]));
+            localStorage.setItem('streak', streak);
+            localStorage.setItem('lastCompletedDate', lastCompletedDate);
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('morningRoutine');
+            if (saved) {
+                const ids = JSON.parse(saved);
+                ids.forEach(id => {
+                    const checkbox = document.querySelector(`.exercise[data-id="${id}"] .checkbox`);
+                    if (checkbox) {
+                        checkbox.classList.add('checked');
+                        completedExercises.add(id);
+                        document.querySelector(`.exercise[data-id="${id}"]`).classList.add('completed');
+                    }
+                });
+            }
+            
+            streak = parseInt(localStorage.getItem('streak')) || 0;
+            lastCompletedDate = localStorage.getItem('lastCompletedDate');
+            
+            updateProgress();
+            updateStreak();
+        }
+
+        loadProgress();
+    </script>
+</body>
+</html>

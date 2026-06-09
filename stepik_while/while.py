@@ -581,10 +581,8 @@
 #         print('C' * i + '+' * j)
 # for i in range(1, 2):
 #     print(i * 'C')
-
 #     for j in range(2, 4):
 #         print(j * '♨️')
-
 #     for k in range(3, 1, -1):
 #         print(k * '🐳')
 
@@ -628,4 +626,79 @@
 # for i in range (1, num + 1):
 #     print(i, i, i, i, i )
 
-print('Таблица-3')
+# print('Таблица-3')
+# num = int(input())
+# for i in range (1, num + 1):
+#     print('')
+#     for j in range (1, 10):
+#         print(f'{i} + {j} = {i + j}')
+
+# print('Численный треугольник 1')
+# num = int(input())
+# for i in range(1, num + 1):
+#     for j in range(1, i + 1):
+#         continue
+#     print(j * str(i))
+
+# print('Звёздный треугольник 🌟🌶️')
+# num = int(input())
+# for i in range (1, num//2 + 2):
+#     print('*' * i)
+# for j in range (num//2 , 0, -1):
+#     print('*' * j)
+
+# total = 0
+# for x in range(1, 65):
+#     for y in range(1, 60):
+#         if 12 * x + 13 * y == 777:
+#             total += 1
+#             print('x =', x, 'y =', y)
+# print('Общее количество натуральных решений =', total)
+
+# print('считаем месяцы!')
+# total = 0
+# for n in range(1, 28):
+#     for k in range(1, 30):
+#         for m in range(1, 31):
+#             if 28 * n + 30 * k + 31 * m == 365:
+#                 total += 1
+#                 print('n =', n, 'k =', k, 'm =', m)
+# print('Общее количество натуральных решений =', total)
+
+# print('Старинная задача 🐮')
+# print('Сколько быков, коров и телят можно купить ровно на 100 рублей, если плата за быка – 10 рублей, за корову – 5 рублей, за телёнка – 0.5 рубля и надо купить 100 голов скота?')
+# bull = 0
+# cow = 0
+# calf = 0
+# total = 0
+# for bull in range(100):
+#     for cow in range(100):
+#         for calf in range(100):
+#             if bull*10 + cow*5 + calf*0.5 == 100:
+#                 if bull + cow + calf == 100:                        
+#                     print(bull, cow, calf)
+#                     break
+
+# print('Гипотеза Эйлера о сумме степеней 🌶️')
+# a = 0
+# b = 0
+# c = 0
+# d = 0
+# e = 0
+# for a in range(1, 151):
+#     for b in range(a, 151):
+#         for c in range(b, 151):
+#             for d in range(c, 151): 
+#                 for e in range(d, 151):               
+#                     if a**5 + b**5 + c**5 + d**5 == e**5:                        
+#                         print(a, b, c, d, e)                
+#                         print(a+b+c+d+e)
+
+print('Делители-1')
+num = int(input())
+for i in range(1, num + 1):
+    count = 0
+    for j in range(1, i + 1):
+        if i % j == 0:
+            count +=1
+    print(i, count * '+')

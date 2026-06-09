@@ -1,5 +1,6 @@
 test_oop_neto.py
 # Виртуальное окружение
+supplements.html
 venv/
 __pycache__/
 *.pyc
@@ -12,7 +13,7 @@ mp3/
 # IDE
 .vscode/
 .idea/
-
+*.env
 # Логи
 *.log
 certificate/

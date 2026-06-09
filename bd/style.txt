@@ -1,0 +1,10 @@
+/* Cтили
+PascalCase: MyAwesomeVariable 
+camelCase: мyAwesomeVariable 
+венгерская нотация: tblHugarianNotation, tbPassword 
+kebab-case: my-awesome-variable
+
+для SQL лучше использовать
+_snake_case, snake_case : my_awesome_variable 
+UPPER_CASE_SNAKE_CASE
+*/
