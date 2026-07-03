@@ -20,3 +20,5 @@ certificate/
 PYAPI_Homework/
 rutube_audio/
 Rutube_audio_GUI/
+# Закрытые учебные модули
+bd/postgre_neto.py
