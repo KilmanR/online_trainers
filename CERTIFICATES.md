@@ -15,6 +15,7 @@
 ## ️ Базы данных и SQL
 
 ### [Основы SQL](certificate_jpg/SQL_basic_OTUS_fixed.jpg)
+### [Базы данных для Python-разработчиков](certificate_jpg/python-databases_page1.jpg)
 
 ---
 
