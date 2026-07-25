@@ -1,60 +1,59 @@
-# 🍗 Chicken with Mushrooms — Quick Stir-Fry
+# 🍗 Курица с грибами — быстрый стир-фрай
 
-> Quick, simple, and delicious — chicken with mushrooms and soy glaze.
+> Быстро, просто и вкусно — курица с грибами и соевым глазированием.
 
-## Ingredients
+## Ингредиенты
 
-- **Chicken breast** — 200g, diced (2×2cm) or thin strips across the grain
-- **Champignon mushrooms** — 150g, sliced medium thickness
-- **Onion** — 1 small, finely diced
-- **Garlic** — 1-2 cloves, crushed with flat side of knife
-- **Soy sauce** — 1 tbsp
-- **Rice vinegar** — 1 tbsp
-- **Oil** — 1 tbsp (or cooking spray)
-- **Spices**: black pepper, paprika, dried herbs
-- **Fresh herbs**: parsley or dill (optional)
-- **Garnish**: Mexican blend, buckwheat, or brown rice (100-150g)
+- **Куриная грудка** — 200г, нарезать небольшими кубиками (2×2 см) или тонкими полосками поперёк волокон
+- **Шампиньоны** — 150г, нарезать пластинками средней толщины
+- **Лук** — 1 шт, мелко нарезать
+- **Чеснок** — 1-2 зубчика, раздавить плоской стороной ножа
+- **Соевый соус** — 1 ст.л.
+- **Рисовый уксус** — 1 ст.л.
+- **Масло** — 1 ст.л. (или спрей)
+- **Специи**: чёрный перец, паприка, сушёные травы
+- **Свежая зелень**: петрушка/укроп (по желанию)
+- **Гарнир**: мексиканская смесь, гречка или бурый рис (100–150 г)
 
-## Step 1: Quick Chicken Sauté
+## Шаг 1: Быстрое обжаривание курицы
 
-- Heat non-stick pan over medium heat
-- Add oil (or spray)
-- Add chicken in a single layer — **don't stir for 1-2 min** to seal juices
-- Flip, sauté 2 more minutes until white
-- Remove chicken to a plate (it will finish cooking later)
+1. Разогрей антипригарную сковороду на среднем огне
+2. Добавь масло (или «пшик» спреем)
+3. Выложи курицу в один слой — **не мешай первые 1–2 минуты** (схватится корочка и соки запечатаются)
+4. Переверни, обжарь ещё 2 минуты до побеления
+5. Переложи на тарелку (она дойдёт позже)
 
-## Step 2: Mushrooms & Aromatics
+## Шаг 2: Грибы и ароматика
 
-- Same pan (don't wash — all the flavor is there!)
-- Add mushrooms
-- **Don't stir** — let water evaporate naturally (5-7 min)
-- Once golden, add onion, sauté 2 min until soft
-- Add crushed garlic + spices, sauté 30 seconds until fragrant
+1. В ту же сковороду (не мой — там весь вкус!) кидай шампиньоны
+2. **Не мешай** — дай воде выпариться, потом жарь до золотистого (5–7 мин)
+3. Добавь лук, жарь 2 минуты до мягкости
+4. В конце — чеснок + специи (30 сек, пока не пошёл аромат)
 
-## Step 3: Glaze & Finish
+## Шаг 3: Глазурование
 
-- Return chicken (and any juices) to the pan
-- Add soy sauce + rice vinegar
-- Toss actively, simmer on low heat 2-3 min
-- Sauce will thicken and coat each piece with a glossy glaze
+1. Верни курицу (+ сок) обратно в сковороду
+2. Влей соевый соус + рисовый уксус (1 ст.л.)
+3. Активно перемешай, потуши на малом огне 2–3 минуты
+4. Соус выпарится, загустеет и покроет каждый кусочек глазурью
 
-## Step 4: Serve
+## Шаг 4: Подача
 
-- Remove from heat
-- Optional: sprinkle with fresh herbs (parsley/dill)
-- Best with: Mexican mix, buckwheat, or brown rice (100-150g cooked)
+1. Сними с огня
+2. Посыпь свежей зеленью (петрушка/укроп)
+3. Гарнир: мексиканская смесь / гречка / бурый рис (100–150 г)
 
-## Nutrition (approximate)
+## Пищевая ценность (на 100г)
 
-| Per | Calories | Protein | Fat | Carbs |
-|-----|----------|---------|-----|-------|
-| 100g chicken | 165 | 31g | 3.6g | 0g |
-| 100g mushrooms | 22 | 3.1g | 0.3g | 3.3g |
-| **Total** | **~400** | **~65g** | **~10g** | **~25g** |
+| Продукт | Калории | Белки | Жиры | Углеводы |
+|---------|---------|-------|------|----------|
+| Курица | 165 | 31г | 3.6г | 0г |
+| Грибы | 22 | 3.1г | 0.3г | 3.3г |
+| **Итого** | **~400** | **~65г** | **~10г** | **~25г** |
 
-## Tips
+## Лайфхаки
 
-- 🍄 Don't wash mushrooms — they absorb water like sponges
-- 🥢 Soy sauce + vinegar = simple Asian glaze, works every time
-- 💪 High protein, low fat — perfect post-workout meal
-- 🔥 Cook fast, eat fresh — don't overthink it
+- 🍄 Не мой грибы — они впитывают воду как губки
+- 🥢 Соевый соус + уксус = простой азиатский глазурь, работает всегда
+- 💪 Много белка, мало жира — идеально после тренировки
+- 🔥 Готовь быстро, ешь свежим — не думай слишком много
