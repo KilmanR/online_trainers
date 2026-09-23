@@ -1,4 +1,9 @@
-## 🐍 Python venv
+# 🚀 Python + Git — шпаргалка (обновлённая версия, бывший cheatsheet.md)
+#
+# ⚠️ Файл разделён по ОС: всё для Linux/Ubuntu (текущая система) — в начале,
+#     для Windows — отдельный блок «🪟 Windows» в самом низу.
+
+## 🐍 Python venv (Linux / Ubuntu)
 
 # Создание виртуального окружения в папке .venv
 python3 -m venv .venv
@@ -6,24 +11,33 @@ python3 -m venv .venv
 # Активация (Linux / macOS)
 source .venv/bin/activate
 
-# Активация (Windows PowerShell)
-.venv\Scripts\Activate.ps1
-
-# Активация (Windows CMD)
-.venv\Scripts\activate.bat
-
 # Деактивация окружения
 deactivate
 
 # Удаление окружения (Linux / macOS)
 rm -rf .venv
 
-# Удаление окружения (Windows)
-rmdir /s /q .venv
+# Создать окружение с конкретной версией Python
+python3.12 -m venv .venv
+
+# Узнать текущий интерпретатор и версию
+which python3
+python3 --version
+
+# Установка пакета / посмотреть установленные
+python3 -m pip install <пакет>
+python3 -m pip list          # = pip list
+python3 -m pip show <пакет>  # детали пакета (версия, путь)
+
+# Поднять простой HTTP-сервер в текущей папке (8000 порт)
+python3 -m http.server
+
+# Проверить код без запуска (в т.ч. неиспользуемые импорты)
+python3 -m pyflakes <файл.py>
 
 ---
 
-## 🌳 Git
+## 🌳 Git (команды одинаковы для Linux и Windows — в Git Bash)
 
 # Инициализация нового репозитория
 git init
@@ -57,6 +71,61 @@ git push origin && git push gitverse
 
 # Пушим сразу на оба ресурса
 git pushall
+
+# ─── Отмены и откаты ────────────────────────────────────
+
+# Отозвать изменение из индекса (файл остаётся изменённым)
+git reset HEAD <имя_файла>
+
+# Отменить изменения в рабочем файле (вернуть из последнего коммита)
+git restore <имя_файла>
+
+# Отменить добавленный файл после git add . (вернуть в working dir)
+git restore --staged <имя_файла>
+
+# Спрятать текущие изменения на время
+git stash
+git stash pop        # вернуть обратно
+
+# Изменить сообщение последнего коммита
+git commit --amend -m "новое описание"
+
+# Вернуть удалённый файл из коммита
+git restore <файл> -- <путь>
+
+# ─── Различия ───────────────────────────────────────────
+
+# Показать изменения в рабочих файлах
+git diff
+
+# Показать, что попадёт в коммит (из индекса)
+git diff --staged
+
+# История изменений конкретного файла
+git log -p -- <файл>
+
+# Гораздо более читаемо (требуется внешняя утилита diff-so-fancy)
+# git config --global core.pager "diff-so-fancy | less --tabs=4 -RF"
+
+# ─── Удалённые репозитории ──────────────────────────────
+
+# Посмотреть список remote (origin, gitverse в т.ч.)
+git remote -v
+
+# Добавить второй remote
+git remote add gitverse <URL>
+
+# ─── Теги ───────────────────────────────────────────────
+
+# Создать тег (версию) на текущем коммите
+git tag v1.0.0
+
+# Отправить теги на remote
+git push --tags
+
+# Удалить тег локально и на remote
+git tag -d v1.0.0
+git push origin --delete v1.0.0
 
 # ─── Ветки ──────────────────────────────────────────────
 
@@ -162,7 +231,7 @@ pipdeptree
 
 ---
 
-## ✅ Чеклист перед началом работы
+## ✅ Чеклист перед началом работы (Linux)
 
 # 1. Создать папку проекта
 mkdir <имя_проекта> && cd <имя_проекта>
@@ -192,3 +261,31 @@ git commit -m "init: структура проекта, venv, gitignore"
 
 # 9. (Опционально) Создать ветку для разработки
 git checkout -b dev
+
+---
+
+## 🪟 Windows (блок для Windows)
+
+### Python venv (Windows)
+
+# Создание окружения
+python -m venv .venv
+
+# Активация (PowerShell)
+.venv\Scripts\Activate.ps1
+
+# Активация (CMD)
+.venv\Scripts\activate.bat
+
+# Деактивация окружения
+deactivate
+
+# Удаление окружения
+rmdir /s /q .venv
+
+### Заметки для Windows
+
+# .gitignore вместо touch:  type nul > .gitignore   (CMD)  /  New-Item .gitignore  (PowerShell)
+# echo ".venv/" >> .gitignore — работает так же
+# pip: python -m pip install <пакет>, python -m pip freeze > requirements.txt
+# Создание venv на Windows: python -m venv .venv
