@@ -10,6 +10,7 @@
 ### [Основы Python: создаём телеграмбота](certificate_jpg/python-telegram-bot.jpg)
 ### [ООП и работа с API](certificate_jpg/oop-and-api.jpg)
 ### [Профессиональная работа с Python](certificate_jpg/professional-python.jpg)
+### [Django: создание backend-приложений](certificate_jpg/django-backend.jpg)
 
 ---
 
